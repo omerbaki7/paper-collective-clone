@@ -1,7 +1,6 @@
 <script setup>
-// Bu bileşenin dışarıdan hangi bilgileri alacağını tanımlıyoruz.
-// Buna "props" denir.
 defineProps({
+  id: Number, // <-- ID'Yİ PROP OLARAK ALMAK İÇİN BUNU EKLE
   name: String,
   artist: String,
   price: Number,
@@ -10,31 +9,41 @@ defineProps({
 </script>
 
 <template>
-  <div class="product-card">
-    <img :src="imageUrl" :alt="name" class="product-image" />
-    <h3 class="product-name">{{ name }}</h3>
-    <p class="product-artist">{{ artist }}</p>
-    <p class="product-price">{{ price }} EUR</p>
-  </div>
+  <RouterLink :to="`/product/${id}`" class="product-link">
+    <div class="product-card">
+      <img :src="imageUrl" :alt="name" class="product-image" />
+      <h3 class="product-name">{{ name }}</h3>
+      <p class="product-artist">{{ artist }}</p>
+      <p class="product-price">{{ price }} EUR</p>
+    </div>
+  </RouterLink>
 </template>
 
 <style scoped>
-/* 'scoped' kelimesi, bu stillerin sadece bu bileşeni etkilemesini sağlar. */
+/* RouterLink'in altı çizili mavi link gibi görünmesini engellemek için: */
+.product-link {
+  text-decoration: none;
+  color: inherit;
+  display: block;
+}
+
 .product-card {
   border: 1px solid #f0f0f0;
   text-align: left;
   padding: 10px;
   cursor: pointer;
   transition: box-shadow 0.3s ease;
+  height: 100%;
 }
 
 .product-card:hover {
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
+/* !!! BÜTÜN SORUNU ÇÖZEN EKSİK KISIM BURASI !!! */
 .product-image {
-  width: 100%;
-  aspect-ratio: 1 / 1.4; /* Resimlerin orantılı durmasını sağlar */
+  width: 100%; /* Resmin, kartın genişliğine uymasını sağlar */
+  aspect-ratio: 1 / 1.4;
   object-fit: cover;
   background-color: #f9f9f9;
 }

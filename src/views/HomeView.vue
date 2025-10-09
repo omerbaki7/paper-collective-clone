@@ -8,14 +8,15 @@ import productsData from '../data/products.json';
     <h1 class="page-title">All Posters</h1>
     
     <div class="product-grid">
-      <ProductCard
-        v-for="product in productsData"
-        :key="product.id"
-        :name="product.name"
-        :artist="product.artist"
-        :price="product.price"
-        :imageUrl="product.imageUrl"
-      />
+     <ProductCard
+      v-for="product in productsData"
+      :key="product.id"
+      :id="product.id"  
+      :name="product.name"
+      :artist="product.artist"
+      :price="product.price"
+      :imageUrl="product.imageUrl"
+    />
     </div>
   </div>
 </template>
