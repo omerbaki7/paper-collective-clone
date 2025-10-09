@@ -4,27 +4,35 @@
     "name": "White Tulips",
     "artist": "By Leia Bryans",
     "price": 35,
-    "imageUrl": "/images/white-tulips.jpg"
+    "imageUrl": "/images/white-tulips.jpg",
+    "category": "Art Trays",
+    "theme": "Colorful" 
   },
   {
     "id": 2,
     "name": "Two Glasses",
     "artist": "By Mikael Siirilä",
     "price": 25,
-    "imageUrl": "/images/two-glasses.jpg"
+    "imageUrl": "/images/two-glasses.jpg",
+    "category": "Photography",
+    "theme":  "Black & White"
   },
   {
     "id": 3,
     "name": "At The Beach",
     "artist": "By Line Hachem",
     "price": 35,
-    "imageUrl": "/images/at-the-beach.jpg"
+    "imageUrl": "/images/at-the-beach.jpg",
+    "category": "Paintings",
+    "theme": "Nature"
   },
   {
     "id": 4,
     "name": "The Jacket",
     "artist": "By Camilla O'Gorman",
     "price": 40,
-    "imageUrl": "/images/the-jacket.jpg"
+    "imageUrl": "/images/the-jacket.jpg",
+    "category": "Paintings",
+    "theme": "Fashion"
   }
 ]

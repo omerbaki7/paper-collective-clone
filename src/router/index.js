@@ -21,6 +21,13 @@ const router = createRouter({
       name: 'cart',
       component: CartView
     },
+       // ':categoryName' kısmı dinamiktir, yani buraya ne yazılırsa (Photography, Paintings vb.)
+      // onu bir parametre olarak kabul eder.
+    {
+      path: '/category/:categoryName',
+      name: 'category',
+      component: HomeView // Bu rota da HomeView'ı gösteriyor!
+    },
     {
       path: '/about',
       name: 'about',
