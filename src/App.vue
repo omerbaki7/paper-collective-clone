@@ -1,10 +1,11 @@
 <script setup>
 // Sayfalar arasında geçişi yönetecek olan ana bileşeni içeri aktarıyoruz.
 import { RouterView } from 'vue-router';
+import Navbar from './components/Navbar.vue';
 </script>
 
 <template>
-  <RouterView />
+ <Navbar /> <RouterView />
 </template>
 
 <style>
